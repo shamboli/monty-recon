@@ -189,6 +189,7 @@ def si_callback(room, event):
     
     hostname = args[0]
     print('subdomain inspection callback initiated for {}'.format(hostname))
+    # do error handling on this later 
     results = subdomain_inspection(hostname)
     
     if len(results) == 0:
