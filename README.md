@@ -13,6 +13,19 @@ Dependencies:
   - https://github.com/henshin/filebuster/tree/master/wordlists
   - https://github.com/danielmiessler/SecLists/blob/master/Miscellaneous/wordlist-skipfish.fuzz.txt
 
+Requirements:
+- config.py:
+```python
+USERNAME = ""  # Bot's username
+PASSWORD = ""  # Bot's password
+SERVER = ""  # Matrix server URL
+```
+- user_whitelist.txt:
+```text
+@username:matrix.org
+@username:custom.server.org
+```
+
 Usage instructions:
 - **!helpmonty**: display a help message
 - **!hello**: sends a greeting to the user
