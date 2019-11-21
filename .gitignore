@@ -1,7 +1,3 @@
-# ignore configuration files
-config.py
-user_whitelist.txt
-
 # ignore compiled files
 *.pyc
 __pycache__/

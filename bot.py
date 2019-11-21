@@ -80,8 +80,12 @@ def subdomain_inspection(host):
     else:  
         return False
     
-    results = sublist3r.main(host, 200, None, ports=None, silent=True, verbose=False, enable_bruteforce=bf, engines=engine_list)
-    return results
+    try:
+        results = sublist3r.main(host, 200, None, ports=None, silent=True, verbose=False, enable_bruteforce=bf, engines=engine_list)
+        print(results)
+        return results
+    except Exception as e:
+        return str(e)
 
 # callbacks
 def help_callback(room, event):
@@ -187,13 +191,10 @@ def si_callback(room, event):
     print('subdomain inspection callback initiated for {}'.format(hostname))
     results = subdomain_inspection(hostname)
     
-    # Get the bytesize of the list to determine how we'll send it back
-    size = sys.getsizeof(results) 
-    
     if len(results) == 0:
         room.send_html('<pre>Domain formatted incorrectly</pre>')
         return
-    if len(results) > 150: 
+    if len(results) > 0: 
         # upload to hastebin as well 
         hastebin_url = hastebin.post('\n'.join(results))
         room.send_html('Results for <b>{}</b> (view @ {}):'.format(hostname, hastebin_url))
