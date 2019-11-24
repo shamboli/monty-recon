@@ -5,7 +5,7 @@ Information:
 - Montybot is a work in progress ChatOps tool to help enumerate subdomains and/or to fuzz directories of given websites or web applications. 
 
 Dependencies:
-- [ghostbin.py] (simple ghostbin request post module)
+- ghostbin.py (simple ghostbin request post module)
 - [matrix_bot_api](https://github.com/shawnanastasio/python-matrix-bot-api) (modified to include whitelisting)
 - [sublist3r](https://github.com/aboul3la/Sublist3r)
 - [wfuzz](https://github.com/xmendez/wfuzz)
