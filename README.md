@@ -16,9 +16,9 @@ Dependencies:
 Requirements:
 - config.py:
 ```python
-USERNAME = ""  # Bot's username
+USERNAME = ""  # Bot's username, in the format of `@user:server.com`
 PASSWORD = ""  # Bot's password
-SERVER = ""  # Matrix server URL
+SERVER = ""  # Matrix server URL, in the format of `https://server.com`
 GITHUB_TOKEN = "" # Github API token for posting Gists
 ```
 - user_whitelist.txt:
