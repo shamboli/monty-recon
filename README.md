@@ -1,5 +1,5 @@
-## Monty Host Inspector (MHI) (v1.0.2)
-Version: 1.0.2
+## Monty Host Inspector (MHI) (v1.0.3)
+Version: 1.0.3
 
 Information:
 - Montybot is a work in progress ChatOps tool to help enumerate subdomains and/or to fuzz directories of given websites or web applications. 
@@ -19,6 +19,7 @@ Requirements:
 USERNAME = ""  # Bot's username
 PASSWORD = ""  # Bot's password
 SERVER = ""  # Matrix server URL
+GITHUB_TOKEN = "" # Github API token for posting Gists
 ```
 - user_whitelist.txt:
 ```text

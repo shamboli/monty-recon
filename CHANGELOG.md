@@ -1,5 +1,19 @@
 # Changelog: 
 
+### 1.0.3
+**Feature enhancements:**
+
+- Added support for GitHub Gists. Previously used data uploading sites (pastebin, hastebin, ghostbin,etc) were insufficient for the amount of data that could be accumulated via host or subdomain inspections. Create an API with gist permission, and add your API token in `config.py`. Due to some character limitations in Gist creation, URLs are SHA1 hashed, and the resultant hash is used as the Gist title. 
+- Added a percentage based status indicator for subdomain inspection. Monty will send an update at approximately 25, 50 and 75 percent complete (not rounded because it looks cool)
+
+**Bugfixes:**
+
+- Added logic to fix an infinite redirect for sites which redirect invalid paths to a homepage or other landing page. 
+- Added and removed support for Sprunge.us as a data uploader. 
+- Added user whitelisting for the basic POST callback, `!post`.
+- Added basic URL input sanitization for subdomain inspection. Subdomain inspection now supports `https://google.com/` as input, or `google.com` (`https://google.com///////////' turns into `https://google.com/`)
+- General text cleanup/formatting.
+
 ### 1.0.2
 **Feature enhancements:**
 
